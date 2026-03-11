@@ -1,0 +1,10 @@
+@import 'imports';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", system-ui, -apple-system, sans-serif;
+  background: var(--main-bg);
+}
