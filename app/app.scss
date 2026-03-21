@@ -12,6 +12,7 @@
     pointer-events: none;
     z-index: 0;
     filter: blur(80px);
+    animation: glowFloat 12s ease-in-out infinite alternate;
 
     &--top-left {
       top: -20%;
@@ -24,5 +25,14 @@
       right: -10%;
       background: var(--glow-2)
     }
+  }
+}
+
+@keyframes glowFloat {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-40px);
   }
 }

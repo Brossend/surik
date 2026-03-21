@@ -1,0 +1,139 @@
+.ui-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  &__label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgb(140, 140, 140);
+  }
+
+  &__required {
+    margin-right: 4px;
+    color: #ff6b6b;
+  }
+
+  &__control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgb(31, 31, 31);
+    transition: border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+    &:focus-within {
+      border-color: rgba(255, 255, 255, 0.24);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+    }
+
+    &--disabled {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    &--error {
+      border-color: rgba(255, 107, 107, 0.75);
+
+      &:focus-within {
+        border-color: rgba(255, 107, 107, 0.9);
+        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.12);
+      }
+    }
+  }
+
+  &__left-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__field {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    caret-color: rgba(255, 255, 255, 0.05);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &--with-left-icon {
+      padding-left: 44px;
+    }
+
+    &--with-toggle {
+      padding-right: 46px;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: #ffffff;
+      -webkit-box-shadow: 0 0 0 1000px #17181c inset;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.55);
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background 0.2s ease,
+    color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.18);
+      outline-offset: 1px;
+    }
+  }
+
+  &__message {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.55);
+
+    &--error {
+      color: #ff6b6b;
+    }
+  }
+}

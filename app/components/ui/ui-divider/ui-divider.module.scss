@@ -1,0 +1,26 @@
+.ui-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__line {
+    flex: 1;
+    min-width: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    flex-shrink: 0;
+    padding: 0 12px;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: lowercase;
+  }
+}
