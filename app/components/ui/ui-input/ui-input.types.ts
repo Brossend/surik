@@ -1,14 +1,14 @@
-export type TUiInputType = 'text' | 'email' | 'password';
+export type TUiInputType = 'text' | 'email' | 'password' | 'nickname';
 
 export type TResolvedInputType =
-    "text"
-    | "email"
-    | "search"
-    | "tel"
-    | "url"
-    | "none"
-    | "numeric"
-    | "decimal"
+    | 'text'
+    | 'email'
+    | 'search'
+    | 'tel'
+    | 'url'
+    | 'none'
+    | 'numeric'
+    | 'decimal'
     | undefined;
 
 export type TUiInputEmits = {

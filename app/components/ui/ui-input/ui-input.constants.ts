@@ -1,4 +1,4 @@
-import type {IUiInputProps} from "~/components/ui/ui-input/ui-input.types";
+import type { IUiInputProps } from '~/components/ui/ui-input/ui-input.types';
 
 export const uiInputDefaultProps: Required<IUiInputProps> = {
     type: 'text',

@@ -61,6 +61,10 @@ import UiButton from "~/components/ui/ui-button/ui-button.vue";
 import UiLink from "~/components/ui/ui-link/ui-link.vue";
 import UiDivider from "~/components/ui/ui-divider/ui-divider.vue";
 
+useHead({
+  title: 'Вход — Surik',
+});
+
 const email = ref('');
 const password = ref('');
 const rememberMe = ref(false);

@@ -86,10 +86,14 @@
 </template>
 
 <script lang="ts" setup>
-import {computed, ref, useAttrs, useId} from 'vue';
+import { computed, ref, useAttrs, useId } from 'vue';
 
-import {uiInputDefaultProps} from './ui-input.constants';
-import type {IUiInputProps, TResolvedInputType, TUiInputEmits} from './ui-input.types';
+import { uiInputDefaultProps } from './ui-input.constants';
+import type {
+  IUiInputProps,
+  TResolvedInputType,
+  TUiInputEmits,
+} from './ui-input.types';
 
 defineOptions({
   name: 'UiInput',
@@ -146,11 +150,19 @@ const resolvedAutocomplete = computed((): string => {
     return 'current-password';
   }
 
+  if (props.type === 'nickname') {
+    return 'username';
+  }
+
   return 'off';
 });
 
 const resolvedInputMode = computed((): TResolvedInputType => {
-  return props.type === 'email' ? 'email' : 'text';
+  if (props.type === 'email') {
+    return 'email';
+  }
+
+  return 'text';
 });
 
 const resolvedLeftIcon = computed((): string => {
@@ -164,6 +176,10 @@ const resolvedLeftIcon = computed((): string => {
 
   if (props.type === 'password') {
     return 'mdi:lock-outline';
+  }
+
+  if (props.type === 'nickname') {
+    return 'mdi:user-outline';
   }
 
   return '';

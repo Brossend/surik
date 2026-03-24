@@ -23,6 +23,7 @@
 
 <script lang="ts" setup>
 import {computed, useAttrs} from 'vue';
+import { NuxtLink } from '#components';
 
 import {uiLinkDefaultProps} from './ui-link.constants';
 import type {IUiLinkProps, TUiLinkEmits} from './ui-link.types';
@@ -45,8 +46,8 @@ const isExternal = computed((): boolean => {
   return Boolean(props.href) && props.target === '_blank';
 });
 
-const linkTag = computed((): string => {
-  return isNuxtLink.value ? 'NuxtLink' : 'a';
+const linkTag = computed(() => {
+  return isNuxtLink.value ? NuxtLink : 'a';
 });
 
 const resolvedTo = computed((): string | undefined => {
