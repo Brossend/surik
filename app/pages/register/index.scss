@@ -52,4 +52,13 @@
     color: rgb(140, 140, 140);
     font-weight: 400;
   }
+
+  &__error {
+    width: 100%;
+    margin-top: -8px;
+    color: rgb(255, 119, 119);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+  }
 }

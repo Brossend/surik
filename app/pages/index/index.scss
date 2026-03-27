@@ -1,0 +1,131 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 32px 16px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: min(100%, 640px);
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(18px);
+  }
+
+  &__eyebrow {
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    margin: -12px 0 0;
+    color: rgb(160, 160, 160);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  &__label {
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__value {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    text-align: right;
+    word-break: break-word;
+  }
+
+  &__state {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    color: rgb(220, 220, 220);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__error {
+    margin: 0;
+    color: rgb(255, 119, 119);
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home {
+    &__card {
+      padding: 24px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    &__row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__toolbar {
+      flex-direction: column;
+    }
+
+    &__value {
+      text-align: left;
+    }
+  }
+}

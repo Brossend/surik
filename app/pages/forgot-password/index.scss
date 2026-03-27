@@ -1,4 +1,4 @@
-.login {
+.forgot-password {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
 
   &__container {
     width: 440px;
-    height: 700px;
+    min-height: 700px;
   }
 
   &__card {
@@ -44,20 +44,23 @@
     font-weight: 400;
     line-height: 25px;
     margin-top: -24px;
+    text-align: center;
   }
 
-  &__subform {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  &__registration {
+  &__footer {
     font-size: 14px;
     line-height: 22px;
     color: rgb(140, 140, 140);
     font-weight: 400;
+  }
+
+  &__success {
+    width: 100%;
+    margin-top: -8px;
+    color: rgb(142, 214, 155);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
   }
 
   &__error {
